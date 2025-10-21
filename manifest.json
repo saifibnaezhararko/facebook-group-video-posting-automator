@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Facebook Marketing Automation",
+  "version": "1.0",
+  "description": "Automate Facebook group video posting",
+  "permissions": ["tabs", "scripting", "storage"],
+  "host_permissions": ["https://www.facebook.com/*", "https://facebook.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["input.csv", "videos/*", "*.mp4", "*.mov", "*.avi"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
